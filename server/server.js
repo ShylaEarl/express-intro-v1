@@ -31,7 +31,7 @@ function getRandomInt(max){
     return Math.floor(Math.random()* Math.floor(max));
 }
 
-app.post('/quotes', (req, res) => {
+app.post('/submitquotes', (req, res) => {
     console.log('hello from post', req.body); // req.body is related to body parser. important to add console.log with descriptive strings in each app to debug/know where things are/coming from
     quotesData.list.push(req.body); //pushing new data (from postman or DOM) into our existing array
     res.sendStatus(200);
